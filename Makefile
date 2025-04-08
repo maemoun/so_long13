@@ -39,4 +39,4 @@
 all :
 	@clear
 	@rm -rf so_long
-	@gcc *.c ./get_next_line/*.c -o so_long
+	@gcc *.c ./get_next_lines/*.c -o so_long

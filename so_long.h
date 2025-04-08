@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 11:57:50 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/08 13:31:08 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:53:43 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include "./get_next_line/get_next_line.h"
+#include "./get_next_lines/get_next_line.h"
 
 
 #include <stdio.h>
@@ -46,5 +46,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *s1);
 void    ft_read_maps(char *map, t_list *list);
 void	ft_check_maps_errors(t_list *list);
+void	ft_check_valid_map(t_list *list);
 
 #endif
