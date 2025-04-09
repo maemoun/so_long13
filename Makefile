@@ -35,8 +35,10 @@
 # re: fclean all
 
 # .PHONY: clean
+MLX = /Users/maeskhai/Desktop/MLX42/libmlx42.a
+LIBFLAGS = -framework Cocoa -framework OpenGL -framework IOKit -L/Users/maeskhai/Desktop/MLX42 -lglfw3
 
 all :
 	@clear
 	@rm -rf so_long
-	@gcc *.c ./get_next_lines/*.c -o so_long
+	@gcc *.c ./get_next_lines/*.c $(LIBFLAGS) $(MLX) -o so_long

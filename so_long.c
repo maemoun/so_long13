@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 11:57:47 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 12:33:11 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 14:21:53 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ int	main(int ac, char **av)
 	ft_check_file_name(av[1]);
 	ft_read_maps(av[1], &list);
 	ft_check_maps_errors(&list);
+	ft_start_game(&list);
 }

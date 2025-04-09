@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:50:17 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 12:32:07 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 15:54:45 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	ft_copy_map(t_list *list)
 {
 	list->cpy_map = malloc((list->map_height + 1) * sizeof(char *));
 	if (!list->cpy_map)
-		ft_print_error("Error!\nAllocation failed\n", list->map, NULL);
+		ft_print_error("Error\nAllocation failed\n", list->map, NULL);
 	list->i = 0;
 	while (list->i < list->map_height)
 	{
@@ -52,7 +52,7 @@ void	ft_copy_map(t_list *list)
 		if (!list->cpy_map[list->i])
 		{
 			ft_free_map(list->cpy_map);
-			ft_print_error("Error!\nAllocation failed\n", list->map, NULL);
+			ft_print_error("Error\nAllocation failed\n", list->map, NULL);
 		}
 		while (list->j < list->map_width)
 		{

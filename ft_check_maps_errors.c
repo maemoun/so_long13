@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:09:36 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 12:24:18 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 15:54:33 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ void	ft_maps_sides(t_list *list)
 	while (list->map[0][list->i])
 	{
 		if (list->map[0][list->i] != '1')
-			ft_print_error("Error!\nInvalid Map Sides!", list->map, NULL);
+			ft_print_error("Error\nInvalid Map Sides!", list->map, NULL);
 		list->i++;
 	}
 	list->i = 0;
 	while (list->map[list->map_height - 1][list->i])
 	{
 		if (list->map[list->map_height - 1][list->i] != '1')
-			ft_print_error("Error!\nInvalid Map Sides!", list->map, NULL);
+			ft_print_error("Error\nInvalid Map Sides!", list->map, NULL);
 		list->i++;
 	}
 	list->i = 1;
@@ -48,7 +48,7 @@ void	ft_maps_sides(t_list *list)
 	{
 		if (list->map[list->i][0] != '1'
 			|| list->map[list->i][list->map_width - 1] != '1')
-			ft_print_error("Error!\nInvalid Map Sides!", list->map, NULL);
+			ft_print_error("Error\nInvalid Map Sides!", list->map, NULL);
 		list->i++;
 	}
 }
@@ -73,13 +73,13 @@ void	ft_check_chars(t_list *list)
 				list->count_p++;
 			if (list->c != '1' && list->c != '0'
 				&& list->c != 'C' && list->c != 'E' && list->c != 'P')
-				ft_print_error("Error!\nInvalid map chars..!", list->map, NULL);
+				ft_print_error("Error\nInvalid map chars..!", list->map, NULL);
 			list->j++;
 		}
 		list->i++;
 	}
 	if (list->count_c == 0 || list->count_e != 1 || list->count_p != 1)
-		ft_print_error("Error!\nInvalid map chars..!", list->map, NULL);
+		ft_print_error("Error\nInvalid map chars..!", list->map, NULL);
 }
 
 void	ft_check_maps_errors(t_list *list)
