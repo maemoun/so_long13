@@ -1,8 +1,8 @@
 # CC = cc
 # CFLAGS = -Wall -Wextra -Werror
 
-# SRC = so_long.c ft_check_file_name.c ft_len.c ft_print_error.c ft_read_maps.c ft_strjoin.c ft_split.c\
-# 		ft_substr.c ft_strdup.c
+# SRC = ft_check_file_name.c ft_check_maps_errors.c ft_check_valid_map.c ft_del_txt_img.c\
+# 		ft_keyboard_key.c ft_len.c 
 
 # SRC_OBJ = $(SRC:%.c=%.o)
 
