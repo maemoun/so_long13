@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:09:36 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/08 15:43:39 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 12:24:18 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_check_same_lines(t_list *list)
 {
-	int len_line;
+	int	len_line;
 
 	list->map_width = ft_len(list->map[0]);
 	list->i = 1;
@@ -46,7 +46,8 @@ void	ft_maps_sides(t_list *list)
 	list->i = 1;
 	while (list->i < list->map_height - 1)
 	{
-		if (list->map[list->i][0] != '1' || list->map[list->i][list->map_width - 1] != '1')
+		if (list->map[list->i][0] != '1'
+			|| list->map[list->i][list->map_width - 1] != '1')
 			ft_print_error("Error!\nInvalid Map Sides!", list->map, NULL);
 		list->i++;
 	}
@@ -70,7 +71,8 @@ void	ft_check_chars(t_list *list)
 				list->count_e++;
 			if (list->c == 'P')
 				list->count_p++;
-			if (list->c != '1' && list->c != '0' && list->c != 'C' && list->c != 'E' && list->c != 'P')
+			if (list->c != '1' && list->c != '0'
+				&& list->c != 'C' && list->c != 'E' && list->c != 'P')
 				ft_print_error("Error!\nInvalid map chars..!", list->map, NULL);
 			list->j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 10:09:25 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/08 11:27:35 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 12:26:05 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_linejoin(char *line_join, char *line)
 {
-	int i;
-	int j;
-	int len;
-	char *s;
+	int		i;
+	int		j;
+	int		len;
+	char	*s;
 
 	len = (ft_len(line_join) + ft_len(line));
 	s = malloc(len + 1);
 	if (!s)
-		return(NULL);
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (line_join[i])
@@ -31,5 +31,5 @@ char	*ft_linejoin(char *line_join, char *line)
 	while (line[i])
 		s[j++] = line[i++];
 	s[j] = '\0';
-	return(s);
+	return (s);
 }

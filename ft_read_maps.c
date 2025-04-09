@@ -6,18 +6,18 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 18:47:00 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/08 13:16:42 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 12:34:46 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void    ft_read_maps(char *map, t_list *list)
+void	ft_read_maps(char *map, t_list *list)
 {
-	int fd;
-	char *line;
-	char *line_join;
-	char *tmp;
+	int		fd;
+	char	*line;
+	char	*line_join;
+	char	*tmp;
 
 	fd = open(map, O_RDONLY);
 	if (fd < 0)

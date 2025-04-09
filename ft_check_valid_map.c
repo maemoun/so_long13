@@ -6,17 +6,17 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:50:17 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 11:46:39 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 12:32:07 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void    ft_player_position(t_list *list)
+void	ft_player_position(t_list *list)
 {
 	list->i = 0;
-	list->Player_x = 0;
-	list->Player_y = 0;
+	list->player_x = 0;
+	list->player_y = 0;
 	while (list->i < list->map_height - 1)
 	{
 		list->j = 0;
@@ -25,13 +25,13 @@ void    ft_player_position(t_list *list)
 			list->c = list->map[list->i][list->j];
 			if (list->c == 'P')
 			{
-				list->Player_x = list->j;
-				list->Player_y = list->i;
+				list->player_x = list->j;
+				list->player_y = list->i;
 			}
 			if (list->c == 'E')
 			{
-				list->Exit_x = list->j;
-				list->Exit_y = list->i;
+				list->exit_x = list->j;
+				list->exit_y = list->i;
 			}
 			list->j++;
 		}
@@ -39,7 +39,7 @@ void    ft_player_position(t_list *list)
 	}
 }
 
-void    ft_copy_map(t_list *list)
+void	ft_copy_map(t_list *list)
 {
 	list->cpy_map = malloc((list->map_height + 1) * sizeof(char *));
 	if (!list->cpy_map)
@@ -79,7 +79,6 @@ void	ft_flood_fill(char **cpy_map, int x, int y)
 void	ft_check_flood_fill(t_list *list)
 {
 	list->i = 0;
-	
 	while (list->i < list->map_height)
 	{
 		list->j = 0;
@@ -102,6 +101,6 @@ void	ft_check_valid_map(t_list *list)
 {
 	ft_player_position(list);
 	ft_copy_map(list);
-	ft_flood_fill(list->cpy_map, list->Player_x, list->Player_y);
+	ft_flood_fill(list->cpy_map, list->player_x, list->player_y);
 	ft_check_flood_fill(list);
 }
