@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 11:57:50 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 19:58:19 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 20:43:37 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <fcntl.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include "./get_next_lines/get_next_line.h"
+# include "get_next_line.h"
 # include "/Users/maeskhai/Desktop/MLX42/include/MLX42/MLX42.h"
 # include <stdio.h>
 

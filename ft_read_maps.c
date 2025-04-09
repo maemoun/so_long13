@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 18:47:00 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 12:34:46 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 20:36:07 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_read_maps(char *map, t_list *list)
 
 	fd = open(map, O_RDONLY);
 	if (fd < 0)
-		ft_print_error("Error\nCan't Open File Map!\n", NULL, line);
+		ft_print_error("Error\nCan't Open File Map!\n", NULL, NULL);
 	line = get_next_line(fd);
 	if (!line)
 		ft_print_error("Error:\nEmpty file / Nothing ..!\n", NULL, NULL);
