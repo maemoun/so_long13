@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:45:47 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 16:56:17 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 19:23:47 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,9 +84,10 @@ void    ft_start_game(t_list *list)
 	ft_mlx_texture(list);
 	ft_mlx_image(list);
 	ft_mlx_image_to_window(list);
-	// mlx_key_hook(list->win, ft_keyboard_keys, list);
+	list->move_count = 0;
+	mlx_key_hook(list->win, ft_keyboard_key, list);
 	mlx_loop(list->win);
-	// mlx_delete_texture(list->player_txt);
-	// ft_free_map(list->map);
-	// mlx_terminate(list->win);
+	mlx_delete_texture(list->player_txt);
+	ft_free_map(list->map);
+	mlx_terminate(list->win);
 }
