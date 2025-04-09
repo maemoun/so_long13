@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 11:57:50 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/08 15:53:43 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 10:19:22 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ typedef struct s_list
 	int count_p;
 	int	j;
 	char	c;
+	int	Player_x;
+	int	Player_y;
+	int	Exit_x;
+	int	Exit_y;
+	char **cpy_map;
 } t_list;
 
 
@@ -44,6 +49,7 @@ char	*ft_linejoin(char *str, char *line);
 char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *s1);
+void	ft_free_map(char **map);
 void    ft_read_maps(char *map, t_list *list);
 void	ft_check_maps_errors(t_list *list);
 void	ft_check_valid_map(t_list *list);
