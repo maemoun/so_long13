@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:47:14 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 19:25:15 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 20:11:02 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_valid_move(t_list *list, int x, int y)
 {
 	if (list->map[y][x] != '1')
 		return (1);
-	return(0);
+	return (0);
 }
 
 void	ft_move_player(t_list *list, int x, int y)
@@ -29,7 +29,7 @@ void	ft_move_player(t_list *list, int x, int y)
 	{
 		list->count_c--;
 		list->map[y][x] = '0';
-		mlx_image_to_window(list->win, list->background_img, x * 70, y * 70);
+		mlx_image_to_window(list->win, list->grnd_img, x * 70, y * 70);
 	}
 	ft_putstr("moves == ");
 	ft_putnbr(list->move_count);
@@ -50,7 +50,7 @@ void	ft_keyboard_key(mlx_key_data_t k, void	*tmp)
 	if (list->map[list->player_y][list->player_x] == 'E' && list->count_c == 0)
 	{
 		ft_putstr("Finlly ===> Win!");
-		return(mlx_close_window(list->win));
+		return (mlx_close_window(list->win));
 	}
 	if (k.action == MLX_PRESS || k.action == MLX_REPEAT)
 	{

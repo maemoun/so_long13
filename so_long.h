@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 11:57:50 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 19:27:17 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/09 19:58:19 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ typedef struct s_list
 	mlx_texture_t	*wall_txt;
 	mlx_texture_t	*coin_txt;
 	mlx_texture_t	*player_txt;
-	mlx_texture_t	*background_txt;
+	mlx_texture_t	*grnd_txt;
 	mlx_texture_t	*exit_txt;
 	mlx_image_t		*wall_img;
 	mlx_image_t		*coin_img;
 	mlx_image_t		*player_img;
-	mlx_image_t		*background_img;
+	mlx_image_t		*grnd_img;
 	mlx_image_t		*exit_img;
 }	t_list;
 
