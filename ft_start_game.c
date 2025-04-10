@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:45:47 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 20:11:59 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/10 10:34:19 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,28 +47,35 @@ void	ft_mlx_image(t_list *list)
 	}
 }
 
+static void	ft_put_images(t_list *list, char c, int x, int y)
+{
+	if (c == '0' || c == 'P')
+		mlx_image_to_window(list->win, list->grnd_img, x, y);
+	if (c == '1')
+		mlx_image_to_window(list->win, list->wall_img, x, y);
+	if (c == 'C')
+		mlx_image_to_window(list->win, list->coin_img, x, y);
+	if (c == 'P')
+		mlx_image_to_window(list->win, list->player_img, x, y);
+	if (c == 'E')
+		mlx_image_to_window(list->win, list->exit_img, x, y);
+}
+
 void	ft_mlx_image_to_window(t_list *list)
 {
-	list->i = 0;
-	while (list->i < list->map_height)
+	int	x;
+	int	y;
+
+	y = 0;
+	while (y < list->map_height)
 	{
-		list->j = 0;
-		while (list->j < list->map_width)
+		x = 0;
+		while (x < list->map_width)
 		{
-			list->c = list->map[list->i][list->j];
-			if (list->c == '0' || list->c == 'P')
-				mlx_image_to_window(list->win, list->grnd_img, list->j * 70, list->i * 70);
-			if (list->c == '1')
-				mlx_image_to_window(list->win, list->wall_img, list->j * 70, list->i * 70);
-			if (list->c == 'C')
-				mlx_image_to_window(list->win, list->coin_img, list->j * 70, list->i * 70);
-			if (list->c == 'P')
-				mlx_image_to_window(list->win, list->player_img, list->j * 70, list->i * 70);
-			if (list->c == 'E')
-				mlx_image_to_window(list->win, list->exit_img, list->j * 70, list->i * 70);
-			list->j++;
+			ft_put_images(list, list->map[y][x], x * 70, y * 70);
+			x++;
 		}
-		list->i++;
+		y++;
 	}
 }
 
