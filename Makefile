@@ -23,10 +23,10 @@ $(NAME): $(SRC_OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 
-get_next_lines/get_next_line.o: get_next_line.c get_next_line.h
+get_next_lines/get_next_line.o: get_next_line.c so_long.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-get_next_line/get_next_line_utils.o: get_next_line_utils.c get_next_line.h
+get_next_line/get_next_line_utils.o: get_next_line_utils.c so_long.h
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:

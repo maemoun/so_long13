@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:09:36 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 15:54:33 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/10 11:40:07 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_check_same_lines(t_list *list)
 	{
 		len_line = ft_len(list->map[list->i]);
 		if (len_line != list->map_width)
-			ft_print_error("Error\nLines Different!\n", list->map, NULL);
+			ft_print_error("Error\nMap is not rectangular!\n", list->map, NULL);
 		list->i++;
 	}
 }

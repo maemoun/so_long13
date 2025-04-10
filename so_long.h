@@ -6,19 +6,21 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 11:57:50 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/09 20:43:37 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/10 11:49:54 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
+
 # include <fcntl.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include "get_next_line.h"
 # include "/Users/maeskhai/Desktop/MLX42/include/MLX42/MLX42.h"
-# include <stdio.h>
 
 typedef struct s_list
 {
@@ -69,5 +71,15 @@ void	ft_del_images(t_list *list);
 void	ft_putstr(char *s);
 void	ft_putnbr(int n);
 void	ft_keyboard_key(mlx_key_data_t k, void	*tmp);
+
+char	*get_next_line(int fd);
+void	ft_readjoin(int fd, char **next1);
+char	*ft_new_line(char *next1);
+char	*ft_next(char *next1);
+int		ft_strchr(char *s, int c);
+char	*ft_strjoin(char *s1, char *s2);
+void	*ft_calloc(size_t count, size_t size);
+void	ft_free(char **s1, char **s2);
+size_t	ft_strlen(char *s);
 
 #endif

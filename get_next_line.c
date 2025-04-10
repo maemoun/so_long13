@@ -6,11 +6,11 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 11:17:17 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/01/28 13:48:03 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/10 11:48:45 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "so_long.h"
 
 void	ft_free(char **s1, char **s2)
 {

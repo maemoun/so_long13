@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:45:47 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/04/10 10:34:19 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/10 11:38:38 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_mlx_texture(t_list *list)
 {
-	list->wall_txt = mlx_load_png("wall.png");
-	list->coin_txt = mlx_load_png("coin.png");
-	list->player_txt = mlx_load_png("player.png");
-	list->grnd_txt = mlx_load_png("grnd.png");
-	list->exit_txt = mlx_load_png("exit.png");
+	list->wall_txt = mlx_load_png("textures/wall.png");
+	list->coin_txt = mlx_load_png("textures/coin.png");
+	list->player_txt = mlx_load_png("textures/player.png");
+	list->grnd_txt = mlx_load_png("textures/grnd.png");
+	list->exit_txt = mlx_load_png("textures/exit.png");
 	if (!list->wall_txt || !list->coin_txt || !list->player_txt
 		|| !list->grnd_txt || !list->exit_txt)
 	{

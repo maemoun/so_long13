@@ -6,11 +6,11 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 11:17:20 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/01/28 13:48:12 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/04/10 11:48:32 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "so_long.h"
 
 size_t	ft_strlen(char *s)
 {
